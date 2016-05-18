@@ -1,0 +1,35 @@
+/*practice css file*/
+#contact-info {
+
+	font-size: .8em;
+}
+
+.job {
+	background: #e9e5dc;
+	border-radius: 25px;
+	padding-bottom: 20px;
+}
+.accomplishmests {
+font-size: .8em;
+}
+/*What does the "Cascading" part of Cascading Style Sheets mean?
+ When there is a conflict between two CSS rules that select the same element,
+  how does your browser decide which rule to use*/
+  .accomplishmests {
+font-size: 45em;
+}
+  .accomplishmests {
+font-size: .8em;
+}
+/*Find a cheat sheet or quick guide on CSS selectors, 
+or refer to a cheat sheet you've already bookmarked.
+http://www.cheetyr.com/
+ What is a pseudoselector? Write a CSS rule that uses 
+a pseudo selector.
+*/
+
+#contact-info :hover{color: red;}
+body p{
+	color: green;
+}
+
