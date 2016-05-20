@@ -9,6 +9,21 @@ cite {
   margin-top: 10px;
 }
 
+main {
+  width: 70%;
+  display: inline-block;
+  min-width: 10%;
+  padding: 10px;
+}
+
+#external-links {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 5%;
+  padding: 10px;
+}
+
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
@@ -30,3 +45,27 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+body {
+  max-width: 960px;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: x-small;
+  }
+}
+@media screen and (max-width: 500px) {
+  main {
+    width: 100%;
+  }
+  #external-links {
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+/*@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
