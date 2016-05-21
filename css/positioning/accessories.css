@@ -1,17 +1,18 @@
+*{position: fixed;}
 #body {
-	margin-left: 200px;
+	margin-left: 260px;
 	padding: 125px;
 }
 
 div#glasses{
 	position: absolute;
-	top: 165px;
-	left: 60px;
+	top: 155px;
+	left: 63px;
 
 }
 
 div#hat{
 	position: absolute;
 	top: 70px;
-	right: 120px;
+	right: 145px;
 }
