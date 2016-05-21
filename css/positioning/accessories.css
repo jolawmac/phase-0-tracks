@@ -1,8 +1,17 @@
 #body {
 	margin-left: 200px;
-	padding: 90px;
+	padding: 125px;
 }
 
-#glasses{
+div#glasses{
+	position: absolute;
+	top: 165px;
+	left: 60px;
 
+}
+
+div#hat{
+	position: absolute;
+	top: 70px;
+	right: 120px;
 }
