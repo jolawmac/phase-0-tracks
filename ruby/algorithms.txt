@@ -40,6 +40,7 @@ Making Coffee in the Morning:
 		- Locate coffee pot at the end of the counter top in the coffee maker
 		- Once coffee pot is in hand:
 			- Take -= 2 steps back towards sink
+			- Turn right towards sink
 			- Until 8 cups mark is reached on coffee pot fill with water
 		- If coffee pot is not in the coffee maker
 			- Take -= 2 steps back
@@ -47,14 +48,14 @@ Making Coffee in the Morning:
 			- Open dish washer and check for clean coffee pot
 			- If coffee pot is not there
 				- Go back to bed
-			- Once coffee pot is located in dish washer
+			- Else once coffee pot is located in dish washer
 				- Grab it 
-				- Move coffee pot towards wink
+				- Move coffee pot towards sink
 				- Until 8 cups mark is reached fill coffee pot with water
 	- Once 8 cups mark is reached move +=2 steps towards coffee pot
 	- Place coffee pot into coffee maker
 	- Place coffee and filter into coffee maker
-	- Push coffee On button
+	- Push coffee on button
 	- Wait 3:00 minutes for coffee to brew
 	- Until 3:00 is reached pull out coffee cups from cabinet 
 	- Once coffee is finished brewing:
