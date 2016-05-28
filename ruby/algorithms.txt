@@ -1,0 +1,68 @@
+Release 0 - Elevator Robot:
+- Enter the elevator door and move forward until Wall C is reached
+- Move left along wall until Wall B is reached
+- Move left along wall until Wall A is reached
+- Scan Wall A to make sure elevator buttons are against this wall
+	- If no buttons are found:
+		- Move left along Wall A past the elevator doors
+		- Scan Wall A just passed the elevator doors for buttons
+- Once elevator buttons are found:
+		- Ask for the desired floor
+		- Wait 5 seconds for response
+	- If no response was heard:
+		- Exit elevator:
+			- Move along Wall A until exit is reached 
+	- If floor number was called out:
+		- Begin scanning the elevator numbers along the wall
+			- Start at the bottom of the floor numbers listed
+			- Move up +=1 button at a time until desired button is found
+		- Push desired button
+- Once elevator begins moving:
+	- Until desired floor is reached:
+		- Play classic elevator music
+
+
+Release 1 - Real-Life Algorithm:
+Making Coffee in the Morning:
+- Remove covers from body
+- Get out of bed:
+	- Slowly move out of bed
+	- Stretch
+	- Wait 10 seconds for brain to activate
+- Move along cleared path in the bedroom from point A to point B
+- Once hallway is reached:
+	- Move along the left wall
+	- Once entrance to the living room is reached make left turn 
+- Once inside the living room follow straight path into the kitchen
+- Once inside the kitchen 
+	- Locate the coffee pot:
+		- Move along the counter top on the left side of the kitchen
+		- Locate coffee pot at the end of the counter top in the coffee maker
+		- Once coffee pot is in hand:
+			- Take -= 2 steps back towards sink
+			- Until 8 cups mark is reached on coffee pot fill with water
+		- If coffee pot is not in the coffee maker
+			- Take -= 2 steps back
+			- Turn right and face dish washer
+			- Open dish washer and check for clean coffee pot
+			- If coffee pot is not there
+				- Go back to bed
+			- Once coffee pot is located in dish washer
+				- Grab it 
+				- Move coffee pot towards wink
+				- Until 8 cups mark is reached fill coffee pot with water
+	- Once 8 cups mark is reached move +=2 steps towards coffee pot
+	- Place coffee pot into coffee maker
+	- Place coffee and filter into coffee maker
+	- Push coffee On button
+	- Wait 3:00 minutes for coffee to brew
+	- Until 3:00 is reached pull out coffee cups from cabinet 
+	- Once coffee is finished brewing:
+		- Pour coffee into cup
+		- Pour sugar into cup
+		- Pour creamer into cup
+		- Stir with spoon
+- Make way back to bed following the same path as above
+- Once bed is reached:
+	- Begin drinking coffee
+	- Read newspaper or book
