@@ -19,7 +19,7 @@ insurance = gets.chomp
 current_year = 2016
 
 i = 0
-until  <= number_of_employees.to_i do
+until i <= number_of_employees.to_i do
  
 if ((current_year - year) == age) && garlic_bread == "yes" || insurance == "yes"
 	puts "Probably not a vampire."
@@ -36,3 +36,5 @@ else
 	puts "Results inconclusive."
 end 
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
