@@ -1,3 +1,6 @@
+puts "How many employees will be processed?"
+number_of_employees = gets.chomp.to_i
+
 puts "What is your name?"
 name = gets.chomp
 
@@ -14,18 +17,22 @@ puts "Would you like to enroll in the company's health insurance? (yes or no)"
 insurance = gets.chomp
 
 current_year = 2016
+
+i = 0
+until  <= number_of_employees.to_i do
  
 if ((current_year - year) == age) && garlic_bread == "yes" || insurance == "yes"
 	puts "Probably not a vampire."
 	
-elsif ((current_year - year) != age) && garlic_bread == "no" || insurance == "no"
+elsif ((current_year - year) != age) && garlic_bread == "no" || insurance == "waived"
 	puts "Probably a vampire."
 
 elsif ((current_year - year) != age) && garlic_bread == "no" && insurance == "no"
 	puts "Almost certainly a vampire."
 
-elsif name = "Drake Cula" || name == "Tu Fang"
+elsif name == "Drake Cula" || name == "Tu Fang"
 	puts "Definitely a vampire."
 else 
 	puts "Results inconclusive."
 end 
+end
