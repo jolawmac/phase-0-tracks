@@ -1,32 +1,31 @@
 puts "What is your name?"
 name = gets.chomp
 
-puts "How old are you? What year were you born"
-age = gets.chomp
+puts "How old are you?"
+age = gets.chomp.to_i
 
-puts "Our company cafeteria serves garlic bread. Should we order some for you"
+puts "What year were you born"
+year = gets.chomp.to_i 
+
+puts "Our company cafeteria serves garlic bread. Should we order some for you? (yes or no)"
 garlic_bread = gets.chomp
 
-puts "Would you like to enroll in the company's health insurance?"
+puts "Would you like to enroll in the company's health insurance? (yes or no)"
 insurance = gets.chomp
 
-age <= 120
-
-if age <= 120
+current_year = 2016
+ 
+if ((current_year - year) == age) && garlic_bread == "yes" || insurance == "yes"
 	puts "Probably not a vampire."
-else age >= 121
+	
+elsif ((current_year - year) != age) && garlic_bread == "no" || insurance == "no"
 	puts "Probably a vampire."
-end
 
-if garlic_bread == "yes"
-	puts "Probably not a vampire."
-elsif garlic_bread == "no"
-	puts "Probably a vampire."
-else puts "Probably a vampire."
-end
+elsif ((current_year - year) != age) && garlic_bread == "no" && insurance == "no"
+	puts "Almost certainly a vampire."
 
-if insurance == "yes"
-	puts "Probably not a vampire."
-else puts "Probably a vampire."
-end
-		
+elsif name = "Drake Cula" || name == "Tu Fang"
+	puts "Definitely a vampire."
+else 
+	puts "Results inconclusive."
+end 
