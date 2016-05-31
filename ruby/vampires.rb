@@ -6,8 +6,7 @@ employee = gets.chomp.to_i
 # loop 
 
 i = 0
-while i <= employee 
-	i += 1 
+while i < employee 
 
 puts "What is your name?"
 name = gets.chomp.to_s
