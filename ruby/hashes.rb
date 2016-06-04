@@ -11,15 +11,22 @@
 
 
 # Questions for the client: 
+interior_design = {}
+
 puts "What is the client's name?"
 clients_name = gets.chomp
 
-puts "What is the client's age?"
-clients_age = gets.chomp.to_i
+interior_design[clpients_name_first.to_sym] = "dan"
+	puts "Client's name is #{name}"
 
-puts "How many children do you have?"
-children = gets.chomp
 
-puts "Which theme would you like (Select all that apply): "
-theme = gets.chomp
+#puts "What is the client's age?"
+#clients_age = gets.chomp.to_i
 
+
+#puts "How many children do you have?"
+#children = gets.chomp
+
+#puts "Which theme would you like (Select all that apply): "
+#
+#p home
