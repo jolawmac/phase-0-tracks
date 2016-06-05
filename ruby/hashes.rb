@@ -10,8 +10,7 @@
 # Put get.chomps into hash
 # Print the results
 # Allow the user to update or make changes to input
-	# If yes ask what updates or changes need to be made
-	# Else if no changes then move forward
+	# If input is 'no' then no changes 
 # Print the final results 
 
 
@@ -19,11 +18,9 @@
 
 def theme(key)
 	if key == "yes"
-		reply = true
-	elsif key == "no"
-		reply = false
-	else
-		reply = key
+		key = true
+	else key == key
+		key = false
 end
 end 
 
@@ -58,5 +55,18 @@ p interior_design
 
 # Modify any data
 
-puts "Would you like to make any changes or updates?"
+puts "Would you like to make any updates, (if no type 'none')?"
+updates = gets.chomp
 
+if updates != "none"
+	puts "What would you like to update?"
+		updated_key = gets.chomp.to_sym
+	puts "Please enter update:"
+		updated_value = gets.chomp
+		interior_design[updated_key] = updated_value
+end
+
+
+# Print new results
+
+puts interior_design
