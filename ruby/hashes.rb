@@ -66,7 +66,7 @@ if updates != "none"
 		updated_value = gets.chomp
 		interior_design[updated_key] = updated_value
 end
-end
+
 
 
 # Print new results
