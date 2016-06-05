@@ -1,32 +1,52 @@
-# Pseudocode:
 # Ask for the client's name
 # Ask for the client's age
 # Ask the client how many children they have
 # Ask for the desired theme
 # List available themes and give the choice to chose one or several
-# Convert input to the correct data type such as a hash
-# Print the hash once the questions have been answered 
-# Allow the user to update any input using 'none' to move forward
+
+# Convert input to the correct data type 
+# Creat empty hash
+# If/else method 
+# Print the results
+# Allow the user to update or make changes to input
+	# If yes ask what updates or changes need to be made
+	# Else if no changes then move forward
 # Print the final results 
 
 
-# Questions for the client: 
+# Method for 'yes' or 'no' answer in questions below
+
+def theme_chosen(str)
+	str.downcase
+	if st == "yes" || str == "y"
+		puts true
+	elsif str == "no" || str == "n"
+		puts false
+	else 
+		puts "No answer"
+end 
+
+# Empty Hash 
 interior_design = {}
 
+# Questions for clients:
+
 puts "What is the client's name?"
-clients_name = gets.chomp
+clients_name[:name] = gets.chomp
 
-interior_design[clpients_name_first.to_sym] = "dan"
-	puts "Client's name is #{name}"
-
-
-#puts "What is the client's age?"
-#clients_age = gets.chomp.to_i
+puts "What is the client's age?"
+clients_age[:age] = gets.chomp.to_i
 
 
-#puts "How many children do you have?"
-#children = gets.chomp
+puts "How many children do you have?"
+children[:children] = gets.chomp
 
-#puts "Which theme would you like (Select all that apply): "
-#
-#p home
+puts "Which theme would you like: "
+puts "Texas Country Theme"
+texas_theme = gets.chomp
+puts "Gulf Coast Beach Theme"
+gulf_theme = gets.chomp
+puts "Colorado Moutain Theme"
+Colorado_theme = gets.chomp
+puts "West Coast Theme"
+west_coast_theme = gets.chomp
