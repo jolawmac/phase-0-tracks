@@ -11,6 +11,7 @@
 # Print the results
 # Allow the user to update or make changes to input
 	# If input is 'no' then no changes 
+	# If input is 'yes' replace key/value data
 # Print the final results 
 
 
@@ -64,6 +65,7 @@ if updates != "none"
 	puts "Please enter update:"
 		updated_value = gets.chomp
 		interior_design[updated_key] = updated_value
+end
 end
 
 
