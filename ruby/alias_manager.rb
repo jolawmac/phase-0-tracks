@@ -42,8 +42,9 @@ new_name = cap_letters(name).join(" ")
 
 puts "Your new hidden identity is: #{new_name}"
 
-
+# Loop through the entire code to ask the user for more names. 
 # Ask the user for their name repeatedly until they type 'quit'
+
 puts "Would you like to try more names? (Type 'done' when finished)"
 answer = gets.chomp
 if answer == "done"
@@ -54,5 +55,4 @@ end
 # Use data structure to save names the user inputs. Print all those names out.
 
 # PLEASE READ THIS COMMENT SETION: 
-# When running the above code in terminal or repl it may create an infinite loop as I am not finished with the looping just yet.
 # I spent close to 13 hours on this project. I have not finished. I am still creating a loop and data structure when I have time so I can finsihed the project and learn how those two work. I understand how to add the names into the data structure and have them print out. I need a little more practice on loops. I have tried while, until. loop do, and several options but haven't found one that works best just yet. 
