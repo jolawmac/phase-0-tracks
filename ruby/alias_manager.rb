@@ -1,7 +1,9 @@
 # Ask the agent for their name:
 # Swap the first and last names:
 
-puts "Please enter your full name (type 'quit' when done):"
+loop do
+
+puts "Please enter your full name:"
 name = gets.chomp.downcase.split(' ').reverse
 
 # Move the vowels the next vowels using gsub
@@ -42,9 +44,12 @@ puts "Your new hidden identity is: #{new_name}"
 
 
 # Ask the user for their name repeatedly until they type 'quit'
-until new_name == "quit"
-puts "Your new hidden identity is: #{new_name}"
+puts "Would you like to try more names? (Type 'done' when finished)"
+answer = gets.chomp
+if answer == "done"
+	break
 end
+end 
 
 # Use data structure to save names the user inputs. Print all those names out.
 
