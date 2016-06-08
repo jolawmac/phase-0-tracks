@@ -1,6 +1,6 @@
 # Question 2
-def calculate(equation)
-	equation =  
+def calculate(x,y)
+	x + y 
 end
 
-calculate(equation)
+calculate()
