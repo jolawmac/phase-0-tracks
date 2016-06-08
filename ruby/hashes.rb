@@ -55,6 +55,7 @@ interior_design[:west_coast] = theme(gets.chomp)
 p interior_design
 
 # Modify any data
+# I didn't have time to work through any issues if the user decides to update the "theme" section. Ran out of time. 
 
 puts "Would you like to make any updates, (if no type 'none')?"
 updates = gets.chomp
