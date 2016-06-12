@@ -1,10 +1,13 @@
 class Santa
 
-	def initialize(gender, ethnicity)
+	def initialize(gender, ethnicity, accessories)
 		p "Initializing Santa instance..."
 		@gender = gender
 		@ethnicity = ethnicity	
 		@accessories = accessories
+		puts "Gender: #{@gender}"
+		puts "Ethnicity: #{@ethnicity}"
+		puts "accessories: #{@accessories}"
 	end
 
 	def deer_arr(arr)
@@ -13,7 +16,7 @@ class Santa
 
 	def age(int)
 		int += 0
-		puts "Age: #{integer}"
+		puts "Age: #{int}"
 	end
 
 	def speak 
@@ -23,10 +26,26 @@ class Santa
 	def eat_milk_and_cookies(cookie_type)
 		puts "That was a good #{cookie_type}!"
 	end 
+
+	def about 
+		puts "Gender: #{@gender}"
+		puts "Ethnicity: #{@ethnicity}"
+	end 
 end 
 
-santas []
 
+santa = Santa.new("male", "North Polian", "Bag of toys")
+santa.age(23)
+santa.speak
+santa.eat_milk_and_cookies("Snickerdoodle")
+
+santas = []
+genders = ["Male", "Female", "None", "Bigender"]
+ethnicities = ["Black", "White", "Asian", "North Polian"]
+accessories_in_hand = ["toys", "red bag", "milk cup", "plastic bag for cookies"]
+genders.length.times do |i|
+	santas << Santa.new(genders[i], ethnicities[i], accessories_in_hand[i])
+end
 
 # santas = []
 # santas << Santa.new("agender", "black")
