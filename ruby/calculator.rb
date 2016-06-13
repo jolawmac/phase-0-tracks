@@ -8,6 +8,10 @@ end
 
 calculate(1, '+', 5)
 # Not able to figure out how to add arguments xy & z withint my method. 
+<<<<<<< HEAD
+=======
+# Trying many method combinations in rpel throughout this test.
+>>>>>>> git_cheatsheet
 
 # It took me a while to figure out methods in the previous lessons. 
 # Not enough time on this lesson to figure it out. 
