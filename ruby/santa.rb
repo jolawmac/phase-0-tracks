@@ -6,22 +6,15 @@ class Santa
 		@ethnicity = ethnicity	
 		@accessories = accessories
 		@age = 0
+		@deer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		puts "Gender: #{@gender}"
 		puts "Ethnicity: #{@ethnicity}"
 		puts "accessories: #{@accessories}"
-	end
-
-	def deer_ranking(arr)
-		arr = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 	end 
-
-	def celebrate_birthday
-		@age += 1
-	end
 
 	def speak 
 		puts "Ho, ho, ho! Haaaappy holidays!"
-	end 
+	end
 
 	def eat_milk_and_cookies(cookie_type)
 		puts "That was a good #{cookie_type}!"
@@ -31,25 +24,22 @@ class Santa
 		puts "Gender: #{@gender}"
 		puts "Ethnicity: #{@ethnicity}"
 	end 
-	# Getting
 
-	def age
-		@age
-	end
+	# 	# Getter
 
 
-	# Setter
-	def gender=(new_gender)
-		@gender
-	end 
-end 
+# 	# Setter
+# 	def gender=(new_gender)
+# 		@gender
+# 	end 
+# end 
 
 
 santa = Santa.new("male", "North Polian", "Bag of toys")
-santa.deer_ranking
-santa.age(23)
 santa.speak
 santa.eat_milk_and_cookies("Snickerdoodle")
+
+end
 
 santas = []
 genders = ["Male", "Female", "None", "Bigender"]
