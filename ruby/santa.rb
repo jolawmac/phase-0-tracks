@@ -88,7 +88,6 @@ loop do
 	santa = Santa.new(genders, ethnicities, accessories_in_hand)
 	santa.age
 	puts "Santa number #{count}"
-	puts "Age: #{santa.age}"
 	puts "Ethnicity: #{santa.ethnicity}"
 	puts "Gender: #{santa.gender}"
 	break if count == 50
