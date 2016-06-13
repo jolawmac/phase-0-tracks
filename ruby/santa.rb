@@ -1,5 +1,10 @@
 class Santa
 
+# Refactor: 
+
+	attr_reader :age, :ethnicity
+	attr_accessor :gender 
+
 	def initialize(gender, ethnicity, accessories)
 		p "Initializing Santa instance..."
 		@gender = gender
@@ -36,7 +41,7 @@ class Santa
 	def get_mad_at(deer)
 		@deer_ranking.delete(deer)
 		@deer_ranking << deer
-
+	end 
 
 
 # # Getter Methods 
@@ -54,6 +59,8 @@ class Santa
 #  	end 
 #  end 
 
+end
+
 # Test code: 
 santa = Santa.new("male", "North Polian", "Bag of toys")
 santa.speak
@@ -62,7 +69,7 @@ santa.eat_milk_and_cookies("Snickerdoodle")
 santa.celebrate_birthday(10)
 santa.get_mad_at("Vixen")
 
-end
+
 
 # Test Code: Add empty array
 
@@ -74,7 +81,18 @@ genders.length.times do |i|
 santas << Santa.new(genders[i], ethnicities[i], accessories_in_hand[i])
 end
 
-# Loop:
+# Loop the Santas:
+count = 0
+loop do 
+	count += 1
+	santa = Santa.new(genders, ethnicities, accessories_in_hand)
+	santa.age
+	puts "Santa number #{count}"
+	puts "Age: #{santa.age}"
+	puts "Ethnicity: #{santa.ethnicity}"
+	puts "Gender: #{santa.gender}"
+	break if count == 50
+end 
 
 
 
@@ -93,5 +111,6 @@ end
 # example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 # example_genders.length.times do |i|
 #   santas << Santa.new(example_genders[i], example_ethnicities[i])
+# end
 # end
 
