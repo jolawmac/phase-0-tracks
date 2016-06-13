@@ -5,15 +5,19 @@ class Santa
 		@gender = gender
 		@ethnicity = ethnicity	
 		@accessories = accessories
-		@age = 0
 		@deer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@age = 0
 		puts "Gender: #{@gender}"
 		puts "Ethnicity: #{@ethnicity}"
-		puts "accessories: #{@accessories}"
+		puts "Accessories: #{@accessories}"
 	end 
 
 	def speak 
 		puts "Ho, ho, ho! Haaaappy holidays!"
+	end
+
+	def age(int)
+		puts "Age: #{int}"
 	end
 
 	def eat_milk_and_cookies(cookie_type)
@@ -24,30 +28,56 @@ class Santa
 		puts "Gender: #{@gender}"
 		puts "Ethnicity: #{@ethnicity}"
 	end 
+	
+	def celebrate_birthday(age)
+		age += 1
+	end 
 
-	# 	# Getter
+	def get_mad_at(deer)
+		@deer_ranking.delete(deer)
+		@deer_ranking << deer
 
 
-# 	# Setter
-# 	def gender=(new_gender)
-# 		@gender
+
+# # Getter Methods 
+# 	def age
+# 		@age
 # 	end 
-# end 
 
+# 	def ethnicity
+# 		@ethnicity
+# 	end 
 
+# # Setter Methods
+#  	def gender=(new_gender)
+# 		@gender
+#  	end 
+#  end 
+
+# Test code: 
 santa = Santa.new("male", "North Polian", "Bag of toys")
 santa.speak
+santa.age(23)
 santa.eat_milk_and_cookies("Snickerdoodle")
+santa.celebrate_birthday(10)
+santa.get_mad_at("Vixen")
 
 end
+
+# Test Code: Add empty array
 
 santas = []
 genders = ["Male", "Female", "None", "Bigender"]
 ethnicities = ["Black", "White", "Asian", "North Polian"]
 accessories_in_hand = ["toys", "red bag", "milk cup", "plastic bag for cookies"]
 genders.length.times do |i|
-	santas << Santa.new(genders[i], ethnicities[i], accessories_in_hand[i])
+santas << Santa.new(genders[i], ethnicities[i], accessories_in_hand[i])
 end
+
+# Loop:
+
+
+
 
 # santas = []
 # santas << Santa.new("agender", "black")
