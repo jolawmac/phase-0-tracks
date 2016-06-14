@@ -86,7 +86,7 @@ count = 0
 loop do 
 	count += 1
 	santa = Santa.new(genders, ethnicities, accessories_in_hand)
-	santa.age
+	santa.age(33)
 	puts "Santa number #{count}"
 	puts "Ethnicity: #{santa.ethnicity}"
 	puts "Gender: #{santa.gender}"
