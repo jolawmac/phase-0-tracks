@@ -112,4 +112,3 @@ end
 #   santas << Santa.new(example_genders[i], example_ethnicities[i])
 # end
 # end
-
