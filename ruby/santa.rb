@@ -86,9 +86,8 @@ count = 0
 loop do 
 	count += 1
 	santa = Santa.new(genders, ethnicities, accessories_in_hand)
-	santa.age
+	santa.age(33)
 	puts "Santa number #{count}"
-	puts "Age: #{santa.age}"
 	puts "Ethnicity: #{santa.ethnicity}"
 	puts "Gender: #{santa.gender}"
 	break if count == 50
@@ -113,4 +112,3 @@ end
 #   santas << Santa.new(example_genders[i], example_ethnicities[i])
 # end
 # end
-
