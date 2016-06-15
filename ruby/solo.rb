@@ -17,17 +17,19 @@
 7. End
 =end
 
+# Did not have enough time to finish this challenge.
+
 
 # Class 
 
 class Car
 
-	# attr_reader and attr_accessor methods
+# attr_reader and attr_accessor methods
 
-	# attr_reader :year_model :speed
-	# attr_accessor :company :type
+	 attr_reader :year_model :speed
+	 attr_accessor :company :type
 
-	# Initialize method
+# Initialize method
 
 	def initialize(company, type, engine_sound)
 		@company = company
@@ -37,7 +39,7 @@ class Car
 		@engine_sound = engine_sound
 	end 
 
-	# Other methods 
+# Other methods 
 
 	def company 
 		puts "The car company you like is: #{@company}"
@@ -61,6 +63,26 @@ class Car
 	 def year_model (new_model)
 	 	new_model += @year_model
 	 end 
+
+# Getter Methods 
+
+	 def year_model
+	 	@year_model
+	 end
+
+	 def speed
+	 	@speed
+	 end
+
+# Setter Methods 
+
+	 def company=(new_company)
+	 	@company
+	 end
+
+	 def type=(new_type)
+	 	@type
+	 end 
 	
 end
 
@@ -69,4 +91,27 @@ end
 
 car = Car.new("Ford", "Mustang", "Vroom")
 #car.speed(25)
-car.year_model(2015)
+#car.year_model(2015)
+
+cars = []
+companies = ["Ford", "Toyota", "Chevy", "BMS", "Volks", "Dodge"]
+types = ["Mustang", "Camry", "Tahoe", "5 Series", "Beetle", "Ram"]
+engine_sound = ["Vroom", "Grrrrrrr", "Zoom", "Pooowwww", "Mmmph", "Capow"]
+cars.length.times do |i|
+cars << Car.new(companies[i], types[i], engine_sound[i])
+end 
+
+# User Interface and Loop 
+count = 0
+loop do 
+	count += 1 
+	car = Car.new(company, type, engine_sound)
+	car.speed(55)
+	car.year_model(2015)
+	puts "Car #{count}"
+	puts "Company: #{car.company}"
+	puts "Type: #{car.type}"
+	puts "Engine Sound: #{car.engine_sound}"
+	break if count == 50
+end
+
