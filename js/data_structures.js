@@ -15,13 +15,26 @@ horseNames.push("Satin");
 // Var index will the index of the horse array that we'll push into key of new object
 // Another var that will reference index of colors into value of new object 
 
-function assignHorse(horses, horseColors) {
-	var coloredHorses = {};
-	for (var i = 0; i < horses.length; i++) {
-		coloredHorses[horses[i]] = horseColors[i];
-		//coloredHorses[horseColors[i]] = horseColors[i];
-	}
-	console.log(coloredHorses);
-}
+// function assignHorse(horses, horseColors) {
+// 	var coloredHorses = {};
+// 	for (var i = 0; i < horses.length; i++) {
+// 		coloredHorses[horses[i]] = horseColors[i];
+// 		//coloredHorses[horseColors[i]] = horseColors[i];
+// 	}
+// 	console.log(coloredHorses);
+// }
 
-assignHorse(horseNames, colors);
+// assignHorse(horseNames, colors);
+
+
+function car(make, fourDoor) {
+	console.log("Our new car: "+ make + ", Four door: "+ fourDoor);
+};
+
+function drives() {
+		return "Vroom, vroom!"
+	};
+
+newCar = new car("Dodge", true);
+newCar.drives;
+
