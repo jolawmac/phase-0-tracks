@@ -4,6 +4,8 @@
 // 3. When printing the variable use the correct java code to reverse the string.
 // 4. 
 
-function myString() {
+function myString().reverse().toString() {
 	console.log("Hello!");
 }
+
+myString();
