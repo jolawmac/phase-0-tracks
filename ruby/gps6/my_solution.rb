@@ -1,15 +1,19 @@
 # Virus Predictor
 
 # I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-# Require relative uses the file name if the file is in the same directory
-# require requires full path 
+# We spent [1] hours on this challenge.
+# Require relative uses the file name if the file is in the same directory to access data.
+# require requires full the path to access the data. It uses the current directory.
 
 require_relative 'state_data'
 
+# Class mothod 
+
 class VirusPredictor
+
+# Initialize method 
 
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
@@ -17,12 +21,20 @@ class VirusPredictor
     @population_density = population_density
   end
 
+# The virus_effects method creates two to attributes that are held underneath the private method. 
+
   def virus_effects
     predicted_deaths
     speed_of_spread
   end
 
+# The private method hides the methods that are under it from public view. Those methods can only be
+# called upon within the current object. No other object can access those methods. 
+
   private
+
+# The predicted_deaths method is used to iterate through the hash in state_data. The if/else statements 
+# work through the population_density data moving down from anything greater than 200. The data is then put into a mutliplication equation.
 
   def predicted_deaths
     # predicted deaths is solely based on population density
@@ -41,6 +53,9 @@ class VirusPredictor
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
   end
+
+# The speed_of_spread method is used to show the effects on the population as the outbreak spreads.
+# The if/else statements take the population_density number and adds it to the speed variable.
 
   def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
@@ -83,12 +98,31 @@ california.virus_effects
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
 
+# Release 5: Used .each and the file name state_data to retrieve the data from the file. The .each iterates over the data in the hash.
+# This method belongs outside the class because its accessing data from the class method and from another file and putting it into one method. 
 
 STATE_DATA.each do |statename, populationinfo|
   state = VirusPredictor.new(statename, STATE_DATA[statename][:population_density], STATE_DATA[statename][:population])
   state.virus_effects
 end 
 
+
+=begins 
+RELECT: 
+1. The two different syntaxes used are the => and the symbol: in the hashy hash. This helps keep data organized and makes it a little clearer.
+    The difference is : makes the key a symbol. Otherwise hey have the same function.
+
+2. Require relative pulls data from another file into the line of code. Require relative uses the filename whereas require uses the full path to access the data.
+
+3. Iterating through a hash can be done by using something simliar to: hash.each do |key, value|. .map and .map! can also be used. 
+    If only keys or values are needed: hash.each_key (or value) do |key| (or value)
+
+4. I think at first I didn't realize it was redundant to have it listed twice.
+
+5. Three things were solidfied for me during this GPS. The first was reqiure relative. Once we went through it I realized how easy it was to understand and use. 
+    The second was the method used to iterate through all 50 states in release 5. It helped me uderstand iterating over hashes as well as gathering data from a hash within a hash.
+    The final thing was using the private method and what it means.
+=end 
 
 #=======================================================================
 # Reflection Section
