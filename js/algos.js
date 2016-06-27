@@ -11,10 +11,24 @@ var cars = ["Ford", "BMW", "Chevrolet", "Toyota", "Volks"],
 console.log(sorted);
 
 
+// Driver Code:
+
 //cars
 
 
-// function longestName(cars) {
-// 	return cars.length;
-// 	console.log(cars)
-// }
+function cars(arr) {
+	var long = 0;
+	for (var i = 0; i < arr.length; i++) {
+		if (array[i].length > long) {
+			var index = 1;
+			long = arr[i].length;
+		}
+	}
+	console.log(long);
+	return arr[index];
+}
+
+
+Find a Key-Value Match
+
+
