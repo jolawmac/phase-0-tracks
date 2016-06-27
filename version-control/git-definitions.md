@@ -1,4 +1,5 @@
-# Git Definitions
+# Git Definitions:
+# Turning in for Week 2 homework! 
 
 **Instructions: ** Define each of the following Git concepts.
 
