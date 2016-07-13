@@ -30,11 +30,14 @@ end
 	 	     end
 	 	 	p name
 	 	 end
-	
-	# USER INTERFACE
+	# INTERFACE
 
 	puts "would you like to? encrypt type: 2 or decrypt type: 5"
 	spy = gets.chomp
+	until spy == "2" || spy == "5"
+	puts "would you like to? encrypt type: 2 or decrypt type: 5"
+		spy = gets.chomp
+	end 
 	if spy == "2"
 		puts "what name would you like to encrypt"
 		name = gets.chomp
@@ -44,8 +47,9 @@ end
 	puts "what spy name would you like to decrypt?"
 	spy_name = gets.chomp 
 	puts decrypt(spy_name)
-else
-	puts "would you like to? encrypt type: 2 or decrypt type: 5"
+# else
+# 	puts "would you like to? encrypt type: 2 or decrypt type: 5"
+# 	spy = gets.chomp
 	end
 	
 
