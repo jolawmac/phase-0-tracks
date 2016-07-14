@@ -17,46 +17,54 @@ p	name
 end
 	 
 	 
-	 #encrypt("josh")
+	#encrypt("josh")
 	 
-	 def decrypt(spy_name)
-	 	counter = 0 
-	 	name = ""
-	 	abc = "abcdefghijklmnopqrstuvwxyz"
-	 	while counter < spy_name.length
-	 	 	x = abc.index(spy_name[counter])-1
-	 	 	name += abc[x]
-	 	     counter += 1
-	 	     end
-	 	 	p name
-	 	 end
-	# INTERFACE
+def decrypt(spy_name)
+	counter = 0 
+	name = ""
+	abc = "abcdefghijklmnopqrstuvwxyz"
+	while counter < spy_name.length
+	 	x = abc.index(spy_name[counter])-1
+	 	name += abc[x]
+	 	counter += 1
+	 end
+	 p name
+end
 
-	puts "would you like to? encrypt type: 2 or decrypt type: 5"
+# INTERFACE
+	
+# Ask the user for information:
+puts "Would you like to encrypt or decrypt a password? If so type 2 for encrypt or type 5 for decrypt."
+spy = gets.chomp
+	
+# Loop back through question to make sure user enters correct info:
+until spy == "2" || spy == "5"
+	puts "Would you like to encrypt or decrypt? Encrypt type 2; or decrypt type 5"
 	spy = gets.chomp
-	until spy == "2" || spy == "5"
-	puts "would you like to? encrypt type: 2 or decrypt type: 5"
-		spy = gets.chomp
-	end 
+end 
+	
+# If/elsif commands to point user to enter the word they want changed: 
 	if spy == "2"
-		puts "what name would you like to encrypt"
+		puts "What password would you like to encrypt"
 		name = gets.chomp
-	puts encrypt(name)
+# Prints users results 
+		puts encrypt(name)
 	
-	elsif  spy == "5"
-	puts "what spy name would you like to decrypt?"
-	spy_name = gets.chomp 
-	puts decrypt(spy_name)
+	elsif spy == "5"
+		puts "What password would you like to decrypt?"
+		spy_name = gets.chomp
+# Prints users results 
+		puts decrypt(spy_name)
 # else
-# 	puts "would you like to? encrypt type: 2 or decrypt type: 5"
-# 	spy = gets.chomp
+# puts "would you like to? encrypt type: 2 or decrypt type: 5"
+# spy = gets.chomp
 	end
-	
 
-
+puts "Goodbye Agent"
 	 	 
 # encrypt("abc") 
 # encrypt("zed") 
 # decrypt("bcd") 
 # decrypt("afe")
 # decrypt(encrypt("swordfish"))
+# The above nested method call works because both methods are being called upon. The first method is called but won't do anything because inside that we are calling our second method to do the work on the word swordfish.
