@@ -48,13 +48,13 @@ end
 		puts "What password would you like to encrypt"
 		name = gets.chomp
 # Prints users results 
-		puts encrypt(name)
+		puts "Your new password is: #{encrypt(name)}."
 	
 	elsif spy == "5"
 		puts "What password would you like to decrypt?"
 		spy_name = gets.chomp
 # Prints users results 
-		puts decrypt(spy_name)
+		puts "Your new password is: #{decrypt(spy_name)}."
 # else
 # puts "would you like to? encrypt type: 2 or decrypt type: 5"
 # spy = gets.chomp
