@@ -12,7 +12,7 @@ Release 0 - Elevator Robot:
 	- If no response was heard:
 		- Exit elevator:
 			- Move along Wall A until exit is reached 
-	- If floor number was called out:
+	- Else if floor number was called out:
 		- Begin scanning the elevator numbers along the wall
 			- Start at the bottom of the floor numbers listed
 			- Move up +=1 button at a time until desired button is found
