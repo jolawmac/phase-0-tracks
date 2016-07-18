@@ -6,7 +6,6 @@ while employee >= 1
 	puts "Employee number #{employee}:"
 	puts ""
 
-
 # Questions asked:
 
 puts "What is your name?"
