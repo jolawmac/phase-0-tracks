@@ -32,8 +32,8 @@ def translate_phrase(phrase)
 	char_index = 0 
 	translated_response = ""
 	while char_index < phrase.length 
-	translated_response << translate_char(phrase[char_index])
-	char_index += 1 
+		translated_response << translate_char(phrase[char_index])
+		char_index += 1 
 	end 
 	translated_response
 end 
@@ -48,7 +48,7 @@ loop do
 	inputted_phrase = gets.chomp
 	break if inputted_phrase == 'q'
 	puts ""
-	puts "Your translate is as follows:"
+	puts "Your translation is as follows:"
 	puts translate_phrase(inputted_phrase)
 	puts ""
 end
