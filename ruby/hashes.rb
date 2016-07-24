@@ -1,21 +1,23 @@
-# Ask for the client's name
-# Ask for the client's age
-# Ask the client how many children they have
-# Ask for the desired theme
-# List available themes and give the choice to chose one or several
-	# Allow for 'yes' or 'no' answers
-	# Creat a boolean method using the if/else method to make 'yes' or 'no' into true or false statements
-# Convert input to the correct data type 
-# Creat empty hash
-# Put get.chomps into hash
-# Print the results
-# Allow the user to update or make changes to input
-	# If input is 'no' then no changes 
-	# If input is 'yes' replace key/value data
-# Print the final results 
-
+=begin
+	Ask for the client's name
+Ask for the client's age
+Ask the client how many children they have
+Ask for the desired theme
+List available themes and give the choice to chose one or several
+	Allow for 'yes' or 'no' answers
+	Creat a boolean method using the if/else method to make 'yes' or 'no' into true or false statements
+Convert input to the correct data type 
+Creat empty hash
+Put get.chomps into hash
+Print the results
+Allow the user to update or make changes to input
+	If input is 'no' then no changes 
+	If input is 'yes' replace key/value data
+Print the final results 
+=end
 
 # Method to define boolean
+
 
 def theme(key)
 	if key == "yes"
@@ -29,6 +31,9 @@ end
 interior_design = Hash.new(0)
 
 # Questions for clients:
+
+puts "Interior design theme application:"
+puts ""
 
 puts "What is the client's name?"
 interior_design[:name] = gets.chomp
@@ -55,9 +60,8 @@ interior_design[:west_coast] = theme(gets.chomp)
 p interior_design
 
 # Modify any data
-# I didn't have time to work through any issues if the user decides to update the "theme" section. Ran out of time. 
 
-puts "Would you like to make any updates, (if no type 'none')?"
+puts "Would you like to make any updates? (If no type 'none')"
 updates = gets.chomp
 
 if updates != "none"
@@ -69,7 +73,7 @@ if updates != "none"
 end
 
 
-
 # Print new results
+puts "Here is your updated information:"
 
 puts interior_design
