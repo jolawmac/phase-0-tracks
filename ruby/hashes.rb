@@ -1,5 +1,5 @@
 =begin
-	Ask for the client's name
+Ask for the client's name
 Ask for the client's age
 Ask the client how many children they have
 Ask for the desired theme
@@ -16,8 +16,8 @@ Allow the user to update or make changes to input
 Print the final results 
 =end
 
-# Method to define boolean
 
+# Method to define boolean
 
 def theme(key)
 	if key == "yes"
@@ -27,8 +27,11 @@ def theme(key)
 end
 end 
 
+
 # Empty Hash 
+
 interior_design = Hash.new(0)
+
 
 # Questions for clients:
 
@@ -40,7 +43,6 @@ interior_design[:name] = gets.chomp
 
 puts "What is the client's age?"
 interior_design[:age] = gets.chomp.to_i
-
 
 puts "How many children do you have?"
 interior_design[:children] = gets.chomp.to_i
@@ -55,9 +57,11 @@ interior_design[:colorado] = theme(gets.chomp)
 puts "Southern California Theme (yes or no):"
 interior_design[:west_coast] = theme(gets.chomp)
 
+
 # Print results 
 
 p interior_design
+
 
 # Modify any data
 
@@ -74,6 +78,7 @@ end
 
 
 # Print new results
+
 puts "Here is your updated information:"
 
 puts interior_design
