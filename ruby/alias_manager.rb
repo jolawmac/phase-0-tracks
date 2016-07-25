@@ -1,13 +1,13 @@
 # Ask the agent for their name:
 # Swap the first and last names:
 
-loop do
 
-puts "Please enter your full name:"
-name = gets.chomp.downcase.split(' ').reverse
+loop do
+	
+under_cover_names = Hash.new(0)
 
 # Move the vowels the next vowels using gsub
-# Originally I tried an array, a hash, iterating over both, .next, +=1, and several options. It took about 3 hours to figure out .gsub seems to be the easiest way to change the vowels and consonants. I used .gsub from Ruby Docs in Week 4 or 5 lessons. 
+# Originally I tried an array, a hash, iterating over both, .next, +=1, and several options. It took a while to figure out that .gsub seems to be the easiest way to change the vowels and consonants. 
 
 def new_vowels(name)
 	name.map! do |vowel|
@@ -22,6 +22,12 @@ def new_consonants(name)
 		consonants.gsub(/[bcdfghjklmnpqrstvwxyz]/, "b" => "c", "c" => "d", "d" => "f", "f" => "g",	"g" => "h", "h" => "j", "j" => "k", "k" => "l", "l" => "m", "m" => "n", "n" => "p", "p" => "q", "q" => "r", "r" => "s", "s" => "t", "t" => "v", "v" => "w",	"w" => "x",	"x" => "y", "y" => "z", "z" => "b")
 	end
 end
+
+# Ask the agent for their full name:
+
+puts "Please enter your full name:"
+name = gets.chomp.downcase.split(' ').reverse
+
 
 # Print updated name with changed vowels and changed consonants
 
@@ -40,19 +46,44 @@ end
 
 new_name = cap_letters(name).join(" ")
 
+puts ""
 puts "Your new hidden identity is: #{new_name}"
+puts "" 
+
 
 # Loop through the entire code to ask the user for more names. 
 # Ask the user for their name repeatedly until they type 'quit'
 
-puts "Would you like to try more names? (Type 'done' when finished)"
+puts "Would you like to try more names? (Type 'yes' to enter more names or 'no' when finished)"
 answer = gets.chomp
-if answer == "done"
+if answer == "yes"
+	puts ""
+elsif answer == "no"
 	break
+else answer == ""
+	break 
 end
 end 
 
-# Use data structure to save names the user inputs. Print all those names out.
+# Storing the data and printing it out:
 
-# PLEASE READ THIS COMMENT SETION: 
-# I spent close to 13 hours on this project. I have not finished. I am still creating a loop and data structure when I have time so I can finsihed the project and learn how those two work. I understand how to add the names into the data structure and have them print out. I need a little more practice on loops. I have tried while, until. loop do, and several options but haven't found one that works best just yet. 
+puts ""
+puts "Would you like to see your results? (y/n)"
+results = gets.chomp
+
+until results == "y" || results == "n"
+puts "Please type 'y' or 'n'."
+results = gets.chomp
+end
+if results == "y"
+	 under_cover_names.each do |name, new_name|
+	 end
+	puts ""
+	puts "Agent, your name #{name} has been changed to #{new_name}."
+	puts ""
+	#p under_cover_names
+else results == "n"
+	puts ""
+	puts "Agent, welcome to the team."
+end 
+
