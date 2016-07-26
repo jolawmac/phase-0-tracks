@@ -29,7 +29,7 @@ insurance = gets.chomp
 
 # Other Variables
 
-current_year = 2016
+current_year = Time.new
 
 # Release 4: Adding allergies to the mix
 
