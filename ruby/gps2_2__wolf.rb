@@ -4,10 +4,23 @@
   # Create an empty hash
   # set default quantity
   # Split the string into an array
-  # Each item will the key and the quanitity will the value 
+  # Each item will be the key and the quanitity will be the value 
   # Push items into the hash 
   # print the list to the console [can you use one of your other methods here?]
 # output: Hash 
+
+item_list = "carrots, apples, cereal, pizza"
+
+def create_list(list)
+	grocery_list = Hash.new(0)
+	grocery_array = list.split(", ")
+	grocery_array.each {|item| grocery_list[item] = 1 }
+	return grocery_list
+end 
+
+# p create_list("carrots, apples, cereal, pizza")
+
+grocery_list = create_list("carrots, apples, cereal, pizza")
 
 # Method to add an item to a list
 # input: item name and optional quantity
@@ -15,6 +28,12 @@
 	# Create a method with two parameters 
 	# Add each key and value to the end of the list
 # output: The hash with the new key value pair included with data already in hash.
+
+def new_item(grocery_list, item, quant)
+	grocery_list
+end 
+
+new_item("bananas", 6)
 
 # Method to remove an item from the list
 # input: Item name
