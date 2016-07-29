@@ -32,6 +32,20 @@ end
 end 
 
 
+class Kitten 
+
+	def initialize
+		p "Initializing fluffy kitten."
+	end 
+
+	def meow(num)
+		num.times {p "Meow"}
+	end 
+
+	def scratch(furniture)
+		p "The kitten is scratching the #{furniture}!"
+	end
+end 
 
 
 # DRIVER CODE:
@@ -42,3 +56,21 @@ max.speak(5)
 max.roll_over
 max.dog_years(3)
 max.do_yoga
+
+ralph = Kitten.new
+ralph.meow(4)
+ralph.scratch("couch")
+
+
+kitty = []
+50.times do 
+	kitty << Kitten.new
+end
+kitty.each do |i|
+	i.meow(2)
+	i.scratch("post")
+end 
+
+
+
+
