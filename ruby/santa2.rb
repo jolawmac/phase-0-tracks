@@ -10,7 +10,6 @@ class Santa
 		@age = 0
 		puts "Gender: #{@gender}"
 		puts "Ethnicity: #{@ethnicity}"
-		puts "Age: #{@age}"
 	end 
 
 	def speak
@@ -50,7 +49,7 @@ class Santa
 
 	def celebrate_birthday(age)
 		@age += 1
-		puts "Santa's new age is #{celebrate_birthday}!"
+		puts "Santa's new age is #{age}!"
 	end
 
 	def get_mad_at(deer)
@@ -71,7 +70,7 @@ santa = Santa.new("male", "North Polian")
 santa.age(50)
 santa.speak
 santa.eat_milk_and_cookies("Chocolate Chip")
-santa.celebrate_birthday(10)
+santa.celebrate_birthday(50)
 santa.get_mad_at("Vixen")
 
 
