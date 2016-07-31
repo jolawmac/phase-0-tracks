@@ -12,9 +12,6 @@ class Santa
 		@accessories = accessories
 		@deer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0
-		puts "Gender: #{@gender}"
-		puts "Ethnicity: #{@ethnicity}"
-		puts "Accessories: #{@accessories}"
 	end 
 
 	def speak 
@@ -62,7 +59,8 @@ class Santa
 
 end
 
-# Test code: 
+# DRIVER CODE: 
+
 santa = Santa.new("male", "North Polian", "Bag of toys")
 santa.speak
 santa.age(23)
@@ -72,7 +70,7 @@ santa.get_mad_at("Vixen")
 
 
 
-# Test Code: Add empty array
+# DRIVER CODE WITH EMPTY ARRAY:
 
 santas = []
 genders = ["Male", "Female", "None", "Bigender"]
@@ -82,29 +80,20 @@ genders.length.times do |i|
 santas << Santa.new(genders[i], ethnicities[i], accessories_in_hand[i])
 end
 
-# Loop the Santas:
+# LOOP THROUGH THE SANTAS:
+
 count = 0
 loop do 
 	count += 1
-	santa = Santa.new(genders, ethnicities, accessories_in_hand)
+	puts "-" * 20
+	santa = Santa.new(genders.sample, ethnicities.sample, accessories_in_hand.sample)
 	santa.age(33)
 	puts "Santa number #{count}"
-	puts "Ethnicity: #{santa.ethnicity}"
-	puts "Gender: #{santa.gender}"
+	puts "Santa's gender: #{genders}"
+	puts "Santa's ethnicity: #{ethnicities}"
 	break if count == 50
 end 
 
-
-
-
-# santas = []
-# santas << Santa.new("agender", "black")
-# santas << Santa.new("female", "Latino")
-# santas << Santa.new("bigender", "white")
-# santas << Santa.new("male", "Japanese")
-# santas << Santa.new("female", "prefer not to say")
-# santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
-# santas << Santa.new("N/A", "N/A")
 
 # santas = []
 # example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
