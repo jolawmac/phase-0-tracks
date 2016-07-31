@@ -36,6 +36,7 @@ class Santa
 	
 	def celebrate_birthday(age)
 		age += 1
+		puts "Santa's new age is #{age}!"
 	end 
 
 	def get_mad_at(deer)
@@ -66,7 +67,7 @@ santa = Santa.new("male", "North Polian", "Bag of toys")
 santa.speak
 santa.age(23)
 santa.eat_milk_and_cookies("Snickerdoodle")
-santa.celebrate_birthday(10)
+santa.celebrate_birthday(23)
 santa.get_mad_at("Vixen")
 
 
