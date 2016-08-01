@@ -95,17 +95,6 @@ loop do
 end 
 
 
-
-
-# santas = []
-# santas << Santa.new("agender", "black")
-# santas << Santa.new("female", "Latino")
-# santas << Santa.new("bigender", "white")
-# santas << Santa.new("male", "Japanese")
-# santas << Santa.new("female", "prefer not to say")
-# santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
-# santas << Santa.new("N/A", "N/A")
-
 # santas = []
 # example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 # example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
