@@ -8,6 +8,15 @@
 #
 # list_items => ["apples", "peaches", "limes"]
 # grocery_list = {}
+# def create_list(string_of_items)
+#   grocery_list = Hash.new(0)
+#   list_items = string_of_items.split(" ")
+
+#   list_items.each {|item| add_item_to_list(grocery_list,item) }
+
+#   return grocery_list
+# end
+
 def create_list(string_of_items)
   grocery_list = Hash.new(0)
   list_items = string_of_items.split(" ")
