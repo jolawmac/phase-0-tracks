@@ -12,7 +12,14 @@ class Game
 
 	def word_length
 		@guess_count += 1
-		if 
+		if @guess_count > @word.word_length
+			puts "Thanks for playing!"
+		elsif 
+			@guess_count <= @game.word_length
+			puts "Keeping guessing..."
+		else 
+			false
+		end 
 	end 
 
 	def 
@@ -21,3 +28,8 @@ class Game
 end 
 
 # DRIVER CODE: 
+
+puts "Welcome to the word guessing game!"
+game = Game.new
+
+
