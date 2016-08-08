@@ -1,6 +1,6 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [with: Ty Daniels ].
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
@@ -25,19 +25,26 @@ class VirusPredictor
 
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
-    if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
-    elsif @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
-    elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
-    elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
-    else
-      number_of_deaths = (@population * 0.05).floor
-    end
+    # if @population_density >= 200
+    #   number_of_deaths = (@population * 0.4).floor
+    # elsif @population_density >= 150
+    #   number_of_deaths = (@population * 0.3).floor
+    # elsif @population_density >= 100
+    #   number_of_deaths = (@population * 0.2).floor
+    # elsif @population_density >= 50
+    #   number_of_deaths = (@population * 0.1).floor
+    # else
+    #   number_of_deaths = (@population * 0.05).floor
+    # end
+     number_of_deaths = (@population * 0.05).floor
+   
+     for i in 1..4 
+       number_of_deaths = (0.1 * i * @population).floor 
+       if @population_density.between?(50*i, 50*(i+1)) || @population_density >= 200
+     end
+     puts "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
-    print "#{@state} will lose #{number_of_deaths} people in this outbreak"
+    # print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
   end
 
@@ -82,6 +89,27 @@ california.virus_effects
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
 
+STATE_DATA.each do |statename, populationinfo|
+  state = VirusPredictor.new(statename, STATE_DATA[statename][:population_density], STATE_DATA[statename][:population])
+  state.virus_effects
+end 
 
 #=======================================================================
 # Reflection Section
+
+=begins 
+RELECT: 
+1. The two different syntaxes used are the => and the symbol: in the hashy hash. This helps keep data organized and makes it a little clearer.
+    The difference is : makes the key a symbol. Otherwise hey have the same function.
+
+2. Require relative pulls data from another file into the line of code. Require relative uses the filename whereas require uses the full path to access the data.
+
+3. Iterating through a hash can be done by using something simliar to: hash.each do |key, value|. .map and .map! can also be used. 
+    If only keys or values are needed: hash.each_key (or value) do |key| (or value)
+
+4. I think at first I didn't realize it was redundant to have it listed twice.
+
+5. Three things were solidfied for me during this GPS. The first was reqiure relative. Once we went through it I realized how easy it was to understand and use. 
+    The second was the method used to iterate through all 50 states in release 5. It helped me uderstand iterating over hashes as well as gathering data from a hash within a hash.
+    The final thing was using the private method and what it means.
+=end 
