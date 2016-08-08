@@ -20,9 +20,9 @@ class VirusPredictor
   end
 # The virus_effects method creates two to attributes that are held underneath the private method. 
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
-  end
+    predicted_deaths
+    speed_of_spread
+  end 
 
 # The private method hides the methods that are under it from public view. Those methods can only be
 # called upon within the current object. No other object can access those methods. 
@@ -30,7 +30,7 @@ class VirusPredictor
 
 # The predicted_deaths method is used to iterate through the hash in state_data. The if/else statements 
 # work through the population_density data moving down from anything greater than 200. The data is then put into a mutliplication equation.
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths
     #predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -50,7 +50,7 @@ class VirusPredictor
 # The speed_of_spread method is used to show the effects on the population as the outbreak spreads.
 # The if/else statements take the population_density number and adds it to the speed variable.
 
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
